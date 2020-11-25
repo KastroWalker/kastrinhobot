@@ -102,6 +102,9 @@ $client->on('irc.received', function ($message, $write, $connection, $logger) {
 
                 $write->ircPrivmsg($seuCanal, $nick);
                 break;
+            case '!comandos':
+                $write->ircPrivmsg($seuCanal, '!carol | !ban | !twitter | !lives | !caverna | !github | !bot');
+                break;
             default:
                 break;
         }
